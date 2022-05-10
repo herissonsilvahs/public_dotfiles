@@ -1,0 +1,79 @@
+call plug#begin()
+  " Themes plugins
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'dense-analysis/ale'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+" Set theme color
+set termguicolors
+set t_Co=256
+set background=dark
+set completeopt=menu,menuone,popup               "enable popup window
+set completepopup=highlight:InfoPopup,border:off "configure the highlight group
+colorscheme kuroi
+
+" Airline configs
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+highlight Normal ctermbg=Black
+highlight NonText ctermbg=Black
+
+
+syntax on
+
+" Basic configs
+set nu!
+set mouse=a
+set title
+set cursorline
+set encoding=utf-8
+set colorcolumn=80
+set autoread
+
+" Config split
+set splitbelow
+set splitright
+
+" File
+filetype on
+filetype plugin on
+filetype indent on
+
+" Config Tabs
+set softtabstop=2
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set smarttab
+set smartindent
+set autoindent
+set hidden
+
+set signcolumn=yes
+
+" Config search
+set hlsearch
+set incsearch
+set smartcase
+
+" gap 8 lines line and top or bottom
+set scrolloff=8
+
+" Basic maps
+map <C-s> :write<CR>
+vmap <C-y> "+y
+vmap <C-p> "+p
+
+" COC configs
+"let g:coc_global_extensions = [ 'coc-snippets' ]
+
+" coc-git
+let g:coc_git_status = 0
+
+" Ale configs
+let b:ale_linters = ['eslint']
+

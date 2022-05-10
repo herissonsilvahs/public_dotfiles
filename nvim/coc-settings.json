@@ -1,0 +1,5 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "tsserver.log": "verbose",
+  "javascript.validate.enable": false
+}
